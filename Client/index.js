@@ -6,7 +6,7 @@ import NFTs from "./pages/NFTs.js";
 import NotFound from "./pages/NotFound.js";
 function router() {
   const routes = [
-    { path: "/" },
+    { path: "/" ,view:Dashboard},
     { path: "/swap", view: Swap },
     { path: "/store", view: Store },
     { path: "/favorites", view: Favorites },
@@ -45,4 +45,25 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
   router();
+  getCrypto()
 });
+
+
+
+async function getCrypto(){
+  const res = await (await fetch("https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=250&page=1&sparkline=false")).json()
+  res.slice(0, 4).forEach(coin => {
+    //  console.log(coin)
+       addCoin(coin);
+  });
+}
+
+function addCoin(coin){
+ const coinEl= document.createElement("li");
+ coinEl.classList.add("coin");
+ coinEl.innerHTML=`
+ <img src="${coin.image}" alt="">
+ <p>${coin.name}</p>
+ `;
+ document.querySelector(".trending-coins").appendChild(coinEl);
+}
