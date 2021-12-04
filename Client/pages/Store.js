@@ -1,6 +1,6 @@
 const Store = () => {
     return ( 
-        `<h2>Store page</h2>`
+        `<h2>Buy and Sell page</h2>`
      );
 }
  

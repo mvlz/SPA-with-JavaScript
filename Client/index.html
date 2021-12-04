@@ -6,26 +6,76 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SPA</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <link rel="stylesheet" href="Client/style.css">
 </head>
 
 <body>
     <div class="main-layout">
         <nav class="nav-bar">
-            <ul>
-                <li>
-                    <a href="/" data-link>dashboard</a>
+            <div class="sidebar-logo">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4sB8ZWsQw91ggj-wFR6N4g7bhi8QK1a07qIhDEwa509ymD89Wqc-5gZlOzFO-V32qv3g&usqp=CAU"
+                    alt="" class="logo">
+                <span class="logo-name">Orizon</span>
+            </div>
+            <ul class="menu">
+                <li class="menu-item ">
+                    <a href="/" data-link class="" >
+                        <i class="far fa-home"></i>
+                        <span class="text-link">Dashboard</span>
+                    </a>
                 </li>
-                <li>
-                    <a href="posts" data-link>posts</a>
+                <li class="menu-item">
+                    <a href="store" data-link>
+                        <i class="far fa-shopping-bag"></i>
+                        <span class="text-link">Buy & Sell</span>
+                    </a>
                 </li>
-                <li>
-                    <a href="store" data-link>store</a>
+                <li class="menu-item">
+                    <a href="swap" data-link>
+                        <i class="fas fa-exchange-alt"></i>
+                        <span class="text-link">Swap</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="nfts" data-link>
+                        <i class="far fa-cube"></i>
+                        <span class="text-link">NFTs</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="favorites" data-link>
+                        <i class="far fa-heart"></i>
+                        <span class="text-link">My Favorites</span>
+                    </a>
                 </li>
             </ul>
+            <ul class="trending-coins">
+                <h2>Trending Coins</h2>
+                <li class="coin">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/BTC_Logo.svg" alt="">
+                    <p>Bitcoin</p>
+                </li>
+                <li class="coin">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/BTC_Logo.svg" alt="">
+                    <p>Bitcoin</p>
+                </li>
+                <li class="coin">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/BTC_Logo.svg" alt="">
+                    <p>Bitcoin</p>
+                </li>
+                <li class="coin">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/BTC_Logo.svg" alt="">
+                    <p>Bitcoin</p>
+                </li>
+            </ul>
+            <button class="support-btn">Need help ?</button>
         </nav>
         <section class="container">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore doloremque doloribus reprehenderit harum maiores esse quo sint eveniet, dignissimos sapiente beatae perspiciatis odit deserunt accusamus, quaerat repellat ipsam vero itaque?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore doloremque doloribus reprehenderit harum
+            maiores esse quo sint eveniet, dignissimos sapiente beatae perspiciatis odit deserunt accusamus, quaerat
+            repellat ipsam vero itaque?
         </section>
     </div>
     <script src="Client/index.js" type="module"></script>

@@ -1,12 +1,16 @@
 import Dashboard from "./pages/Dashboard.js";
+import Swap from "./pages/Swap.js";
 import Store from "./pages/Store.js";
-import Posts from "./pages/Posts.js";
+import Favorites from "./pages/Favorites.js";
+import NFTs from "./pages/NFTs.js";
 import NotFound from "./pages/NotFound.js";
 function router() {
   const routes = [
-    { path: "/", view: Dashboard },
-    { path: "/posts", view: Store },
-    { path: "/store", view: Posts },
+    { path: "/" },
+    { path: "/swap", view: Swap },
+    { path: "/store", view: Store },
+    { path: "/favorites", view: Favorites },
+    { path: "/nfts", view: NFTs },
   ];
   const potentialRoutes = routes.map((item) => {
     return {
