@@ -293,9 +293,9 @@ body {
 .coin-wallet:hover {
   box-shadow: 11px 16px 35px 0px #e0e0e0;
 }
-.coin-wallet img{
-    width: 1.5rem;
-    height: 1.5rem;
+.coin-wallet img {
+  width: 1.5rem;
+  height: 1.5rem;
 }
 .overview h1 {
   margin-top: 1.25rem;
@@ -362,10 +362,99 @@ body {
 .circle.fill {
   background-color: #fff;
 }
-.wallet-amount{
-    font-size: 1.2rem;
-    letter-spacing: -1px;
+.wallet-amount {
+  font-size: 1.2rem;
+  letter-spacing: -1px;
 }
-.coin-name{
-    color: darkgray;
+.coin-name {
+  color: darkgray;
+}
+
+@media screen and (max-width: 768.99px) {
+  .main-layout {
+    min-height: 100vh;
+    height: unset;
+    flex-direction: column;
+  }
+  .container {
+    width: calc(100% - 4rem);
+    min-height: 100vh;
+    margin-bottom: 3rem;
+  }
+  .page-content {
+    flex-direction: column-reverse;
+    gap: 3rem;
+  }
+  .search-box {
+    width: 8rem;
+  }
+  .menu {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #f8f8f8;
+    flex-direction: row;
+    justify-content: space-evenly;
+    min-height: 3.5rem;
+    max-height: 4rem;
+    box-shadow: 0px -5px 30px -3px #dedede;
+    align-items: center;
+  }
+  .menu-item a {
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .menu-item a i {
+    margin: 0;
+  }
+  .menu-item a:hover {
+    background: unset;
+  }
+  .active::before,
+  .menu-item a:focus::before {
+    left: unset;
+    bottom: 0.02rem;
+  }
+  .active,
+  .menu-item a:focus {
+    width: 3.25rem;
+    height: 3.25rem;
+    background-color: #f8f8f8;
+    color: white;
+    border-radius: 50%;
+    transform: translateY(-1.5rem);
+    box-shadow: 0px -8px 9px -3px #eaeaea;
+    font-size: 1rem;
+  }
+  .active i,
+  .menu-item a:focus i {
+    font-size: 1rem;
+  }
+  .active span,
+  .menu-item a:focus span {
+    display: none;
+  }
+  .nav-bar {
+    width: calc(100% - 3rem);
+    flex-direction: row;
+    padding:  0.5rem 1.5rem;
+  }
+  .trending-coins {
+    display: none;
+  }
+  button.support-btn {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    font-size: 0;
+    border: none;
+  }
+  button.support-btn::before {
+    content: "?";
+    font-weight: 600;
+    font-size: 1rem;
+    font-family: cursive;
+
+  }
 }
